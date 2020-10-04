@@ -1,0 +1,21 @@
+@keyframes ufo-hover {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes ufo-beam {
+    0% {
+        opacity: 0%;
+        clip-path: polygon(50% 0%, 50% 100%, 50% 100%);
+    }
+
+    100% {
+        opacity: 100%;
+        clip-path: polygon(50% 0%, 35% 100%, 65% 100%);
+    }
+}
