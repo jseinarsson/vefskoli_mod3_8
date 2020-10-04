@@ -8,6 +8,10 @@ body {
   background-color: #BFF799;
 }
 
+.hidden {
+  display: none;
+}
+
 @keyframes loading-appear {
   from {
     opacity: 0%;
@@ -94,6 +98,10 @@ body {
   height: 50vh;
   clip-path: polygon(50% 0%, 50% 100%, 50% 100%);
   animation: ufo-beam 8000ms ease-in-out 1100ms forwards;
+}
+
+.application {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
