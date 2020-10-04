@@ -10,13 +10,23 @@
     align-items: center;
     justify-content: center;
 
+    &__text {
+        position: absolute;
+        width: 20vw;
+        animation: 
+            loading-appear 1000ms ease-out forwards,
+            loading-pulse 1000ms ease-in-out 1000ms alternate infinite;
+    }
+
     &__ufo {
         position: absolute;
         min-width: 100px;
         width: 15vw;
         z-index: 2;
 
-        animation: ufo-hover 1000ms ease-in-out alternate infinite;
+        animation: 
+            ufo-enter 1000ms ease-out forwards, 
+            ufo-hover 1000ms ease-in-out 1000ms alternate infinite;
     }
 
     &__beam {
@@ -26,7 +36,9 @@
         width: 100%;
         height: 50vh;
 
-        animation: ufo-beam 5000ms ease-in-out forwards;
-        clip-path: polygon(50% 0%, 35% 100%, 65% 100%);
+        clip-path: polygon(50% 0%, 50% 100%, 50% 100%);
+        animation: ufo-beam 8000ms ease-in-out 1100ms forwards;
     }
+
+    animation: loading-scroll 2000ms ease-in-out 9100ms forwards;
 }

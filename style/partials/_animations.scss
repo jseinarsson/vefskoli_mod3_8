@@ -1,3 +1,32 @@
+@keyframes loading-appear {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes loading-pulse {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 50%;
+    }
+}
+
+@keyframes ufo-enter {
+    0% {
+        transform: translateX(60vw) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(-10px) translateX(0);
+    }
+}
+
 @keyframes ufo-hover {
     0% {
         transform: translateY(-10px);
@@ -14,8 +43,28 @@
         clip-path: polygon(50% 0%, 50% 100%, 50% 100%);
     }
 
+    50% {
+        opacity: 85%;
+        clip-path: polygon(50% 0%, 35% 100%, 65% 100%); 
+    }
+
+    90% {
+        opacity: 85%;
+        clip-path: polygon(50% 0%, 25% 100%, 75% 100%); 
+    }
+
     100% {
         opacity: 100%;
-        clip-path: polygon(50% 0%, 35% 100%, 65% 100%);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+}
+
+@keyframes loading-scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100vh);
     }
 }
