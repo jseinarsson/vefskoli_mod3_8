@@ -1,0 +1,68 @@
+@use 'variables' as var;
+@use 'animations' as animate;
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    @extend %flex-center;
+    
+    padding: 20px;
+}
+
+.dashboard {
+    background-color: rgba(191, 247, 153, 0.1);
+    border: 5px solid var.$c-light;
+
+    height: 100%;
+    width: 100%;
+
+    color: var.$c-light;
+
+    &__initialize {
+        height: 100%;
+        @extend %flex-center;
+    }
+};
+
+.name {
+    &__textbox {
+        margin: 10px;
+        min-width: 20vw;
+        padding: 10px;
+        border: 5px solid var.$c-light;
+        background-color: var.$c-light;
+        transition: background-color 0.5s;
+        
+        text-align: center;
+        font-family: var.$font;
+        font-size: 2em;
+        color: var.$c-dark;
+        @extend %tracked;
+
+        &:focus, &:hover {
+        background-color: transparent;
+        color: var.$c-light;
+        }
+    }
+
+    &__button {
+        fill: var.$c-light;
+        background-color: transparent;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: translateX(8px);
+        }
+    }
+
+    &__test {
+        align-self: flex-end;
+        margin-bottom: 20px;
+    }
+}

@@ -1,11 +1,27 @@
+.name__textbox {
+  letter-spacing: 0.5em;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  outline: inherit;
+  cursor: pointer;
+}
+
 body {
-  background-color: #BFF799;
+  background-color: #1C0A33;
+  font-family: "Exo 2", sans-serif;
+  font-size: 12px;
 }
 
 .hidden {
@@ -131,8 +147,56 @@ body {
   animation: cow-beamup 4800ms ease-in-out 3100ms forwards;
 }
 
-.application {
-  text-decoration: none;
+.dashboard__initialize, main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+}
+
+.dashboard {
+  background-color: rgba(191, 247, 153, 0.1);
+  border: 5px solid #BFF799;
+  height: 100%;
+  width: 100%;
+  color: #BFF799;
+}
+.dashboard__initialize {
+  height: 100%;
+}
+
+.name__textbox {
+  margin: 10px;
+  min-width: 20vw;
+  padding: 10px;
+  border: 5px solid #BFF799;
+  background-color: #BFF799;
+  transition: background-color 0.5s;
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  font-size: 2em;
+  color: #1C0A33;
+}
+.name__textbox:focus, .name__textbox:hover {
+  background-color: transparent;
+  color: #BFF799;
+}
+.name__button {
+  fill: #BFF799;
+  background-color: transparent;
+  transition: transform 0.5s;
+}
+.name__button:hover {
+  transform: translateX(8px);
+}
+.name__test {
+  align-self: flex-end;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
