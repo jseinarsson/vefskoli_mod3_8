@@ -15,7 +15,8 @@
         width: 20vw;
         animation: 
             loading-appear 1000ms ease-out forwards,
-            loading-pulse 1000ms ease-in-out 1000ms alternate infinite;
+            loading-pulse 1000ms ease-in-out 1000ms alternate infinite,
+            loading-disappear 1000ms ease-in 9100ms forwards;
     }
 
     &__ufo {
@@ -26,11 +27,13 @@
 
         animation: 
             ufo-enter 1000ms ease-out forwards, 
-            ufo-hover 1000ms ease-in-out 1000ms alternate infinite;
+            ufo-hover 1000ms ease-in-out 1000ms alternate infinite,
+            ufo-exit 1000ms ease-in 9100ms forwards;
     }
 
     &__beam {
         align-self: flex-end;
+        position: absolute;
 
         background-color: var.$c-light;
         width: 100%;
@@ -40,5 +43,11 @@
         animation: ufo-beam 8000ms ease-in-out 1100ms forwards;
     }
 
-    animation: loading-scroll 2000ms ease-in-out 9100ms forwards;
+    &__cow {
+        position: absolute;
+        align-self: flex-end;
+        width: 10vw;
+
+        animation: cow-beamup 4800ms ease-in-out 3100ms forwards;
+    }
 }

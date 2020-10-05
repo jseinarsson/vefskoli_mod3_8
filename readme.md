@@ -2,4 +2,4 @@
 
 [See the site live here](http://)
 
-1. Loading screen using CSS animations & setTimeout() in JS to delay the reveal of the main section. 
+1. Loading screen using CSS animations & setTimeout() in JS to delay the reveal of the main section.

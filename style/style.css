@@ -28,6 +28,14 @@ body {
     opacity: 50%;
   }
 }
+@keyframes loading-disappear {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
 @keyframes ufo-enter {
   0% {
     transform: translateX(60vw) rotate(-45deg);
@@ -49,25 +57,42 @@ body {
     opacity: 0%;
     clip-path: polygon(50% 0%, 50% 100%, 50% 100%);
   }
-  50% {
-    opacity: 85%;
+  40% {
+    opacity: 100%;
     clip-path: polygon(50% 0%, 35% 100%, 65% 100%);
   }
-  90% {
-    opacity: 85%;
-    clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  45% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 75%;
+  }
+  55% {
+    opacity: 50%;
+  }
+  60% {
+    opacity: 100%;
+    clip-path: polygon(50% 0%, 35% 100%, 65% 100%);
   }
   100% {
-    opacity: 100%;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    opacity: 0%;
+    clip-path: polygon(50% 0%, 50% 100%, 50% 100%);
   }
 }
-@keyframes loading-scroll {
+@keyframes cow-beamup {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-100vh);
+    transform: translateY(-50vh) rotate(60deg) scale(0.6);
+  }
+}
+@keyframes ufo-exit {
+  0% {
+    transform: translateY(-10px) translateX(0);
+  }
+  100% {
+    transform: translateY(0) translateX(-60vw) rotate(-30deg);
   }
 }
 .loading {
@@ -77,27 +102,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: loading-scroll 2000ms ease-in-out 9100ms forwards;
 }
 .loading__text {
   position: absolute;
   width: 20vw;
-  animation: loading-appear 1000ms ease-out forwards, loading-pulse 1000ms ease-in-out 1000ms alternate infinite;
+  animation: loading-appear 1000ms ease-out forwards, loading-pulse 1000ms ease-in-out 1000ms alternate infinite, loading-disappear 1000ms ease-in 9100ms forwards;
 }
 .loading__ufo {
   position: absolute;
   min-width: 100px;
   width: 15vw;
   z-index: 2;
-  animation: ufo-enter 1000ms ease-out forwards, ufo-hover 1000ms ease-in-out 1000ms alternate infinite;
+  animation: ufo-enter 1000ms ease-out forwards, ufo-hover 1000ms ease-in-out 1000ms alternate infinite, ufo-exit 1000ms ease-in 9100ms forwards;
 }
 .loading__beam {
   align-self: flex-end;
+  position: absolute;
   background-color: #BFF799;
   width: 100%;
   height: 50vh;
   clip-path: polygon(50% 0%, 50% 100%, 50% 100%);
   animation: ufo-beam 8000ms ease-in-out 1100ms forwards;
+}
+.loading__cow {
+  position: absolute;
+  align-self: flex-end;
+  width: 10vw;
+  animation: cow-beamup 4800ms ease-in-out 3100ms forwards;
 }
 
 .application {
