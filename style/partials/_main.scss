@@ -20,8 +20,16 @@ body {
     background-color: var.$c-dark;
     font-family: var.$font;
     font-size: var.$font-size;
+
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .hidden {
     display: none;
+}
+
+.reveal {
+    animation: fade-up 1000ms ease-in-out forwards;
 }
