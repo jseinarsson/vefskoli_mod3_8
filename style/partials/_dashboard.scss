@@ -33,6 +33,10 @@ main {
         display: none;
     }
 
+    &--reveal {
+        animation: fade-scale 1000ms ease-in-out forwards;
+    }
+
     &__initialize {
         height: 100%;
         @extend %flex-center;

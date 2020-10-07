@@ -116,6 +116,19 @@
     }
 }
 
+@keyframes fade-scale {
+    from {
+        transform-origin: center;;
+        transform: scale(0);
+        opacity: -1;
+    }
+    
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /* @keyframes exit-animation {
     0% {
 
