@@ -139,11 +139,6 @@ body {
     opacity: 1;
   }
 }
-/* @keyframes exit-animation {
-    0% {
-
-    }
-} */
 .loading {
   background-color: #1C0A33;
   height: 100vh;
@@ -342,7 +337,6 @@ main {
   position: absolute;
   width: inherit;
   align-self: center;
-  clip-path: rect(0 0, 100% 0, 50%, 0, 0 50%);
 }
 
 .info__location {
@@ -352,6 +346,62 @@ main {
   margin-right: 20px;
   margin-left: 20px;
   flex-grow: 2;
+}
+
+.scanner__line {
+  transform: translateX(-25px);
+  z-index: 100;
+}
+.scanner__line.animate {
+  animation: scanner-flicker 500ms ease 600ms infinite, move-scanner-line-before 400ms linear 600ms forwards, move-scanner-line-main 6650ms linear 1000ms forwards, move-scanner-line-after 400ms linear 7650ms forwards;
+}
+
+.scanner__content--skeleton {
+  clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+}
+.scanner__content--skeleton.animate {
+  animation: skeleton-scanner 6650ms linear 1000ms forwards;
+}
+
+@keyframes scanner-flicker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes move-scanner-line-before {
+  from {
+    transform: translateX(-25px);
+  }
+  to {
+    transform: translateX(15px);
+  }
+}
+@keyframes move-scanner-line-main {
+  from {
+    transform: translateX(15px);
+  }
+  to {
+    transform: translateX(680px);
+  }
+}
+@keyframes move-scanner-line-after {
+  from {
+    transform: translateX(680px);
+  }
+  to {
+    transform: translateX(720px);
+  }
+}
+@keyframes skeleton-scanner {
+  from {
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

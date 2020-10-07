@@ -124,4 +124,6 @@ exitBtn.addEventListener('click', function() {
 
     dashboard.classList.remove("hidden");
     dashboard.classList.add("reveal");
+
+    return dashboard;
 });
