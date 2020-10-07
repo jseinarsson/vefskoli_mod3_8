@@ -7,7 +7,7 @@
 
     &.animate {
         animation: 
-            scanner-flicker 500ms ease 600ms infinite,
+            scanner-flicker 800ms ease 600ms 9,
             move-scanner-line-before 400ms linear 600ms forwards,
             move-scanner-line-main 6650ms linear 1000ms forwards,
             move-scanner-line-after 400ms linear 7650ms forwards;

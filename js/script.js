@@ -49,6 +49,8 @@ nameBtn.addEventListener('click', function(){
 
 //SCANNING BUTTON ACTIONS
 const scanBtn = document.querySelector(".main__button");
+const cowSkeleton = document.querySelector(".scanner__content--skeleton");
+const scannerLine = document.querySelector(".scanner__line");
 let timesClicked = 0;
 
 scanBtn.addEventListener('click', function(){
@@ -62,7 +64,11 @@ scanBtn.addEventListener('click', function(){
     
         let btnTextInput = document.createTextNode(btnText);
         scanBtn.replaceChild(btnTextInput, scanBtn.lastChild);
-    
+        
+        // Adds animate class to trigger animation
+        scannerLine.classList.add("animate");
+        cowSkeleton.classList.add("animate");
+
         // After scan is complete (7seconds) change button text again
         setTimeout(function() {
             btnText = "SCAN COMPLETE"
@@ -76,7 +82,7 @@ scanBtn.addEventListener('click', function(){
             newMessageContainer.appendChild(newMessage);
 
             mainMessage.replaceChild(newMessageContainer, mainMessage.lastChild);
-        }, 7000);
+        }, 8000);
     } else {
         // If button has been clicked once before, run this function.
         const secondMessageContainer = document.createElement("p");
